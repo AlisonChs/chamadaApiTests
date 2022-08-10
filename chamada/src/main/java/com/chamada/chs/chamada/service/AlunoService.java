@@ -29,7 +29,7 @@ public class AlunoService {
     // Método temporário para cadastrar ou alterar alunos 
     public ResponseEntity<?> cadastrarAlterar(AlunoModel am, String acao) {
 
-        if(am.getRmAluno().equals("")) {
+        if(am.getRmAluno().equals(null)) {
 
             rm.setMensagem("Insira um RM válido!");
             return new ResponseEntity<HttpResponse>(rm, HttpStatus.BAD_REQUEST);
